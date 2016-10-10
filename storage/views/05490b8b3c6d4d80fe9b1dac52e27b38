@@ -1,0 +1,17 @@
+Hey <?php echo e($user->username); ?>!
+
+<?php echo e($blueprint->post->user->username); ?> made a post in a discussion you're following: <?php echo e($blueprint->post->discussion->title); ?>
+
+
+To view the new activity, check out the following link:
+<?php echo e(app()->url()); ?>/d/<?php echo e($blueprint->post->discussion_id); ?>/<?php echo e($blueprint->post->number); ?>
+
+
+---
+
+<?php echo e(strip_tags($blueprint->post->contentHtml)); ?>
+
+
+---
+
+You won't receive any more notifications about this discussion until you're up-to-date.
